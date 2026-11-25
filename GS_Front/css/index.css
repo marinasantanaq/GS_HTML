@@ -1,0 +1,956 @@
+/* INTEGRANTES DO GRUPO
+1TDSPA - RM574491 – MARINA SANTANA QUEIROZ
+1TDSPA - RM576524 – SOFIA OLIVEIRA GONÇALVES
+1TDSPA - RM575649 – JÚLIO BERNARDES DA SILVA
+1TDSPA - RM575635 – RAFAEL MADEIRA GOMES RIBEIRO
+1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA */
+@import url("./style.css");
+/* ========================================
+   CABEÇALHO
+======================================== */
+.body-index {
+    min-height: 100vh;
+    font-family: serif, sans-serif, serif;
+    color: var(--marrom);
+}
+.body-index {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    overflow: auto;
+
+    background-color: var(--bege-claro);
+    background-image: none;
+}
+
+/* ÁREA de linhas e cor do fundo */
+.body-index main > article {
+    position: absolute;
+    /* inset: 55px 25px 14px; */
+    
+    background-color: var(--bege);
+    background-image:
+    repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 17px,
+        var(--linha) 18px,
+        transparent 19px
+        );
+        z-index: 1;
+    }
+    
+    /* ÁREA DO posicionamento dos links CABEÇALHO */
+.cabecalho-index {
+    width: 100%;
+    min-height: 65px;
+    padding: 10px 3%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* flex-wrap: wrap; */
+
+    gap: clamp(8px, 1.3vw, 18px);
+
+    box-sizing: border-box;
+}
+
+.cabecalho-index {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    z-index: 10;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    width: auto;
+    min-height: 0;
+    padding: 10px 18px;
+    
+    background: var(--bege-claro);
+    border: none;
+    border-radius: 0 0 0 38px;
+}
+/* Permite organizar os itens dos dois menus
+   como uma única sequência visual */
+.cabecalho-esquerda-index,
+.cabecalho-direita-index,
+.cabecalho-index nav,
+.cabecalho-index ul {
+    display: contents;
+}
+
+.cabecalho-index ul {
+    list-style: none;
+}
+
+.cabecalho-index a {
+    color: var(--marrom);
+    font-family: "Inria Serif", serif;
+    font-size: clamp(11px, 1.1vw, 14px);
+
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cabecalho-index a:hover {
+    color: var(--verde-escuro);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+/* ORDEM DOS LINKS */
+/* Organização visual dos links */
+.cabecalho-direita-index li:nth-child(1) {
+    order: 1;
+}
+
+.cabecalho-esquerda-index li:nth-child(3) {
+    order: 2;
+}
+
+.cabecalho-esquerda-index li:nth-child(2) {
+    order: 3;
+}
+
+.cabecalho-esquerda-index li:nth-child(1) {
+    order: 4;
+}
+
+.cabecalho-direita-index li:nth-child(2) {
+    order: 5;
+}
+
+.cabecalho-direita-index li:nth-child(3) {
+    order: 6;
+}
+
+.cabecalho-direita-index li:nth-child(4) {
+    order: 7;
+}
+
+.cabecalho-direita-index li:nth-child(5) {
+    order: 8;
+}
+
+/* Logo */
+.logo-index {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+    margin: 4px;
+}
+
+.logo-perfil-index {
+    display: block;
+
+    width: 1.9rem;
+    height: 1.9rem;
+
+    padding: 0;
+
+    object-fit: contain;
+    border-radius: 50%;
+
+    background: rgba(120, 139, 95, 0.2);
+}
+
+/* ========================================
+   ÁREA PRINCIPAL
+======================================== */
+
+.body-index main {
+    position: relative;
+    
+    width: calc(100% - 40px);
+    min-height: 900px;
+    
+    margin: 10px auto 0;
+    
+    border: 1px;
+    
+    background: var(--bege);
+    
+    box-sizing: border-box;
+}
+
+/* Camada dos elementos decorativos */
+.body-index main > article {
+    position: absolute;
+    inset: 0;
+    
+    overflow: hidden;
+    
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Área que contém todas as imagens */
+.assets-container-index {
+    position: absolute;
+    inset: 0;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.assets-container-index img {
+    position: absolute;
+    display: block;
+    
+    height: auto;
+    max-width: none;
+    
+    pointer-events: none;
+    user-select: none;
+    object-fit: contain;
+}
+
+
+/* ========================================
+PLANTAS DECORATIVAS
+======================================== */
+
+/* Primeira planta */
+.assets-container-index img:nth-child(1) {
+    width: 1%;
+    top: 20%;
+    left: 52%;
+    
+    transform: rotate(115deg);
+    z-index: 1;
+}
+/* Segunda planta */
+.assets-container-index img:nth-child(2) {
+    width: 2%;
+    top: 7%;
+    left: 46%;
+    
+    transform: rotate(80deg);
+    z-index: 1;
+}
+/* Terceira planta */
+.assets-container-index img:nth-child(3) {
+    width: 3%;
+    top: 2%;
+    left: 38%;
+    
+    transform: rotate(110deg) scaleX(-1);
+    z-index: 1;
+}
+/* Quarta planta */
+.assets-container-index img:nth-child(4) {
+    width: 8%;
+    top: -11%;
+    left: 27%;
+    
+    transform: rotate(80deg);
+    z-index: 1;
+}
+
+/* Planta mais clara ao fundo */
+.assets-container-index img:nth-child(5) {
+    width: 9%;
+    top: -5%;
+    left: 12%;
+    
+    transform: rotate(75deg);
+    z-index: 0;
+}
+.assets-container-index img:nth-child(6) {
+    width: 8% ;
+    top: 10%;
+    left: 3%;
+
+    transform: rotate(40deg) ;
+
+    z-index: 0 ;
+}
+.assets-container-index img:nth-child(7) {
+    width: 9%;
+    top: 27%;
+    left: -2%;
+    
+    transform: rotate(4deg) scaleX(-1);
+    z-index: 0;
+}
+.melancia-index{
+    width: 10%;
+    top: 55%;
+    left: -1%;
+    
+    transform: rotate(15deg) scaleX(-1);
+    z-index: 0;
+}
+
+.assets-container-index img:nth-child(8) {
+    width: 10%;
+    top: 70%;
+    right: 85%;
+    
+    transform: rotate(-60deg) scaleX(-1);
+    z-index: 0;
+}
+.assets-container-index img:nth-child(9) {
+    width: 11%;
+    top: 75%;
+    right: 75%;
+    
+    transform: rotate(-10deg) scaleX(-1);
+    z-index: 0;
+}
+.assets-container-index img:nth-child(10) {
+    width: 12%;
+    top: 80%;
+    right: 60%;
+    
+    transform: rotate(4deg) scaleX(-1);
+    z-index: 0;
+}
+.cenoura-index {
+    width: 16%;
+    top: 80%;
+    right: 40%;
+    
+    transform: rotate(-80deg);
+    z-index: 0;
+}
+.cebolinha-index{
+    width: 4%;
+    bottom: 92%;
+    left: 27%;
+    
+    transform: rotate(80deg) scaleX(-1);
+    z-index: 0;
+}
+/* ========================================
+   SEÇÃO PRINCIPAL
+======================================== */
+
+
+.texto-container-index {
+    position: absolute;
+
+    /* Posicionamento da composição na página */
+    top: 12%;
+    right: 3%;
+
+    /* Tamanho da composição */
+    width: 54%;
+    max-width: 760px;
+
+    aspect-ratio: 1.45 / 1;
+    height: auto;
+
+    /* Permite que os elementos internos usem cqw */
+    container-type: inline-size;
+    container-name: texto-index;
+
+    /* Organiza as camadas */
+    isolation: isolate;
+
+    box-sizing: border-box;
+}
+
+
+
+/* ========================================
+   QUADRADOS DECORATIVOS
+======================================== */
+
+.quadrado-medio-index {
+    position: absolute;
+
+    top: -2cqw;
+    right: 2cqw;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+.quadrado-escuro-index {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ========================================
+   TÍTULO RETASTE
+======================================== */
+.texto-container-index h1 {
+    position: absolute;
+
+    top: 35%;
+    left: -90%;
+    right: auto;
+
+    width: 100%;
+
+    font-family: serif, sans-serif;
+    font-size: clamp(2rem, 8rem, 8rem);
+    font-weight: 400;
+    line-height: 1;
+
+    color: var(--marrom);
+
+    text-align: left;
+    z-index: 3;
+}
+
+
+.texto-container-index .destaque-index {
+    color:rgb(102, 37, 17);
+}
+
+/* ========================================
+   PARÁGRAFOS DENTRO DO QUADRADO
+======================================== */
+
+.texto-container-index p {
+    position: relative;
+    top: -8cqw;
+    width: 60%;
+    max-width: none;
+
+    margin: 0 auto 2.4cqw;
+    padding: 0;
+
+    font-family: sans-serif, serif;
+    font-size: clamp(10px, 2.2cqw, 15px);
+    line-height: 1.4;
+
+    color: var(--bege-claro);
+
+    box-sizing: border-box;
+
+    z-index: 2;
+}
+
+/* Espaço inicial antes do primeiro parágrafo */
+.texto-container-index p:first-of-type {
+    margin-top: 18cqw;
+}
+
+
+/* ========================================
+   LINKS
+======================================== */
+
+.texto-container-index li {
+    display: inline;
+    list-style: none;
+}
+
+.texto-container-index a {
+    color: var(--bege-claro);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    transition: color 0.3s ease;
+}
+
+.texto-container-index a:hover {
+    color: var(--verde-clarissimo);
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+@media (max-width: 2560px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+        .texto-container-index h1 {
+        left: -150%;
+        right: auto;
+        text-align: right;
+        width: 100%;
+    }
+
+
+    .body-index {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .body-index main {
+        width: calc(100% - 40px);
+        max-width: none;
+        margin: 10px auto 0;
+        box-sizing: border-box;
+    }
+
+}
+
+@media (max-width: 1440px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+        .texto-container-index h1 {
+        left: -100%;
+        right: auto;
+        text-align: right;
+        width: 100%;
+    }
+
+
+    .body-index {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .body-index main {
+        width: calc(100% - 40px);
+        max-width: none;
+        margin: 10px auto 0;
+        box-sizing: border-box;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+    .cabecalho-index {
+        justify-content: center;
+        padding: 10px 3%;
+        gap: 8px 14px;
+        box-sizing: border-box;
+    }
+
+    .cabecalho-index a {
+        font-size: 12px;
+    }
+
+    /* Área principal */
+    .body-index main {
+        width: calc(100% - 24px);
+        min-height: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .body-index main > section {
+        position: relative;
+        width: 100%;
+        min-height: 750px;
+        box-sizing: border-box;
+    }
+
+    /* Composição dos quadrados */
+    .texto-container-index {
+        top: 23%;
+        right: 6%;
+        left: auto;
+
+        width: 88%;
+        max-width: none;
+        height: auto;
+        min-height: 600px;
+
+        aspect-ratio: auto;
+        overflow: visible;
+    }
+
+    .quadrado-medio-index,
+    .quadrado-escuro-index {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Título */
+    .texto-container-index h1 {
+        position: absolute;
+
+        top: -10%;
+        left: -35%;
+        right: 0;
+
+        width: 100%;
+
+        font-size: clamp(42px, 12vw, 66px);
+        line-height: 1.1;
+        text-align: right;
+        white-space: nowrap;
+
+        z-index: 3;
+    }
+
+    /* Parágrafos */
+    .texto-container-index p {
+        position: relative;
+        top: 0;
+
+        width: 82%;
+        height: auto;
+        max-width: 480px;
+
+        font-size: clamp(10px, 2.8vw, 14px);
+        line-height: 1.45;
+
+        margin: 0 auto 17px;
+        padding: 0;
+
+        box-sizing: border-box;
+        z-index: 2;
+    }
+
+    .texto-container-index p:first-of-type {
+        margin-top: 55px;
+    }
+
+    /* Ajustes dos assets em telas menores */
+    .assets-container-index img:nth-child(1) {
+        width: 45%;
+    }
+
+    .assets-container-index img:nth-child(5) {
+        width: 65%;
+    }
+
+    .assets-container-index img:nth-child(6) {
+        width: 20%;
+        top: 55%;
+    }
+
+    .assets-container-index img:nth-child(7) {
+        width: 24%;
+        top: 72%;
+    }
+}
+@media (max-width: 480px) {
+    
+    .cabecalho-index {
+        gap: 8px 10px;
+    }
+
+    .cabecalho-index a {
+        font-size: 11px;
+    }
+
+    .logo-index {
+        width: 23px;
+        height: 23px;
+    }
+    
+    .logo-perfil-index {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .body-index main {
+        min-height: 680px;
+    }
+    
+    .body-index main > section {
+        min-height: 680px;
+    }
+
+    /* Composição dos quadrados */
+    .texto-container-index {
+        top: 24%;
+        right: 4%;
+        
+        width: 92%;
+        height: 68%;
+    }
+    
+    /* Título */
+    .texto-container-index h1 {
+        top: -15%;
+        left: 0;
+        
+        font-size: clamp(38px, 11vw, 54px);
+    }
+    
+    
+    /* Parágrafos */
+    .texto-container-index p {
+        width: 82%;
+        font-size: 12px;
+    }
+    
+    .texto-container-index p:first-of-type {
+        margin-top: 45px;
+    }
+    
+    .rodape-conteudo-index {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .rodape-final-index {
+        grid-column: 1;
+    }
+}
+@media (max-width: 425px) {
+
+    .cabecalho-index {
+        gap: 8px 10px;
+    }
+
+    .cabecalho-index a {
+        font-size: 11px;
+    }
+
+    .logo-index {
+        width: 23px;
+        height: 23px;
+    }
+
+    .logo-perfil-index {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Área principal */
+    .body-index main {
+        min-height: 850px;
+    }
+
+    .body-index main > section {
+        min-height: 850px;
+    }
+
+    /* Composição dos quadrados */
+    .texto-container-index {
+        top: 24%;
+        right: 4%;
+
+        width: 92%;
+        max-width: none;
+
+        height: auto;
+        min-height: 600px;
+
+        aspect-ratio: auto;
+        overflow: visible;
+    }
+
+    /* Quadrados acompanham a composição */
+    .quadrado-medio-index {
+        top: -2cqw;
+        right: 2cqw;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .quadrado-escuro-index {
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Título */
+    .texto-container-index h1 {
+        position: absolute;
+
+        top: -15%;
+        left: -5%;
+        right: auto;
+
+        width: 100%;
+
+        color: var(--marrom);
+        font-size: clamp(38px, 11vw, 54px);
+        line-height: 1.1;
+
+        text-align: left;
+        white-space: nowrap;
+
+        z-index: 3;
+    }
+
+    /* Parágrafos */
+    .texto-container-index p {
+        position: relative;
+
+        top: 0;
+
+        width: 82%;
+        min-height: 0;
+
+        margin: 0 auto 17px;
+        padding: 0;
+
+        color: var(--bege-claro);
+
+        font-size: 12px;
+        line-height: 1.45;
+
+        overflow: visible;
+        z-index: 2;
+    }
+
+    /* Primeiro parágrafo */
+    .texto-container-index p:first-of-type {
+        margin-top: 18cqw;
+    }
+
+    /* Rodapé */
+    .rodape-conteudo-index {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rodape-final-index {
+        grid-column: 1;
+    }
+}
+@media (max-width: 320px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .body-index {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        
+        margin: 0;
+        padding: 0;
+
+        overflow-x: hidden;
+        box-sizing: border-box;
+}
+
+    .body-index main {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .cabecalho-index {
+        gap: 8px 10px;
+    }
+
+    .cabecalho-index a {
+        font-size: 11px;
+    }
+
+    .logo-index {
+        width: 23px;
+        height: 23px;
+    }
+
+    .logo-perfil-index {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .body-index main > section {
+        position: relative;
+        width: 100%;
+        min-height: 850px;
+        box-sizing: border-box;
+    }
+
+    /* Composição dos quadrados */
+    .texto-container-index {
+        top: 24%;
+        right: 4%;
+        width: 92%;
+        max-width: none;
+        height: auto;
+        min-height: 600px;
+        aspect-ratio: auto;
+        overflow: visible;
+    }
+
+    /* Quadrados acompanham a composição */
+    .quadrado-medio-index {
+        top: -2cqw;
+        right: 2cqw;
+        width: 100%;
+        height: 100%;
+    }
+
+    .quadrado-escuro-index {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Título */
+    .texto-container-index h1 {
+        position: absolute;
+        top: -15%;
+        left: -5%;
+        right: auto;
+        width: 100%;
+        color: var(--marrom);
+        font-size: clamp(38px, 11vw, 54px);
+        line-height: 1.1;
+        text-align: left;
+        white-space: nowrap;
+        z-index: 3;
+    }
+
+    /* Parágrafos */
+    .texto-container-index p {
+        position: relative;
+        top: 0;
+        width: 82%;
+        min-height: 0;
+        margin: 0 auto 17px;
+        padding: 0;
+        color: var(--bege-claro);
+        font-size: 12px;
+        line-height: 1.45;
+        overflow: visible;
+        z-index: 2;
+    }
+
+    .texto-container-index p:first-of-type {
+        margin-top: 18cqw;
+    }
+
+    /* Rodapé */
+    .rodape-conteudo-index {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rodape-final-index {
+        grid-column: 1;
+    }
+}

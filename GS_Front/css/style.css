@@ -1,0 +1,295 @@
+/* INTEGRANTES DO GRUPO
+1TDSPA - RM574491 – MARINA SANTANA QUEIROZ
+1TDSPA - RM576524 – SOFIA OLIVEIRA GONÇALVES
+1TDSPA - RM575649 – JÚLIO BERNARDES DA SILVA
+1TDSPA - RM575635 – RAFAEL MADEIRA GOMES RIBEIRO
+1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA */
+
+/* conexão com os outros css: */
+@import url("./sobre.css");
+@import url("./perfil.css");
+@import url("./login.css");
+@import url("./integrantes.css");
+@import url("./index.css");
+@import url("./faq.css");
+@import url("./estabelecimento.css");
+@import url("./contato.css");
+
+/* ==============================
+FONTES
+============================== */
+.inria-serif-light {
+    font-family: "Inria Serif", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.inria-serif-regular {
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inria-serif-bold {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.inria-serif-light-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.inria-serif-regular-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.inria-serif-bold-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/*instrument sans*/
+/* <weight>: Use a value from 400 to 700
+<uniquifier>: Use a unique and descriptive class name*/
+.instrument-sans {
+    font-family: "Instrument Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bege: #b4a995;
+    --bege-claro: #ECEEE2;
+    --verde-clarissimo: #9AAA89;
+    --verde-claro: #788B26;
+    --verde-medio: #45612A;
+    --verde-escuro: #2E4716;
+    --marrom: #2C070B;
+    --marrom-claro: #4e2125;
+    --linha: rgba(190, 105, 94, 0.25);
+    --o-animation: translateY(-2px);
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: serif, sans-serif, serif;
+    color: var(--marrom);
+
+    background-color: var(--bege);
+    background-image:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 17px,
+            var(--linha) 18px,
+            transparent 19px
+        );
+}
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+
+/* ========================================
+   HOVERs
+======================================== */
+header main a:hover{
+    color: var(--verde-escuro);
+}
+footer a:hover{
+    color: var(--verde-clarissimo);
+}
+
+/* ========================================
+   RODAPÉ
+======================================== */
+/* =========================================
+   8. RODAPÉ
+========================================= */
+
+.rodape {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    padding: 35px 7% 20px;
+
+    background-color: var(--verde-escuro);
+    color: var(--bege-claro, #ECEEE2);
+}
+
+/* Botão do assistente virtual */
+
+.chatbot {
+    display: flex;
+    justify-content: flex-end;
+
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.chatbot .botao {
+    border-color: var(--verde-clarissimo, #9AAA89);
+
+    background-color: var(--verde-medio, #45612A);
+    color: var(--bege-claro, #ECEEE2);
+}
+
+.chatbot .botao:hover {
+    background-color: var(--verde-claro, #788B26);
+}
+
+/* Conteúdo do rodapé */
+
+.rodape-conteudo {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.3fr;
+    gap: 40px;
+}
+
+.rodape-conteudo h2 {
+    margin: 0 0 12px;
+
+    color: var(--verde-clarissimo, #9AAA89);
+
+    font-family: "Inria Serif", serif;
+    font-size: 2rem;
+}
+
+.rodape-conteudo h3 {
+    margin: 0 0 15px;
+
+    color: var(--verde-clarissimo, #9AAA89);
+
+    font-family: "Inria Serif", serif;
+    font-size: 1.3rem;
+}
+
+.rodape-conteudo p {
+    margin: 8px 0;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Links do rodapé */
+
+.informacoes-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.informacoes-rodape a,
+.projeto-rodape a {
+    display: inline-block;
+
+    color: var(--bege-claro, #ECEEE2);
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.informacoes-rodape a:hover,
+.projeto-rodape a:hover {
+    color: var(--verde-clarissimo, #9AAA89);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Estrutura atual do HTML usa tags de tabela
+   fora de uma tabela. Estas regras são apenas
+   para manter a apresentação até a correção
+   da estrutura HTML. */
+
+.informacoes-rodape thead,
+.informacoes-rodape tbody,
+.informacoes-rodape tr,
+.informacoes-rodape td {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+/* Bloco de informações do projeto */
+
+.projeto-rodape {
+    margin-top: 25px;
+}
+
+/* Rodapé final */
+
+.rodape-final {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(236, 238, 226, 0.25);
+
+    text-align: center;
+}
+
+.rodape-final p {
+    margin: 0;
+
+    color: rgba(236, 238, 226, 0.75);
+    font-size: 0.85rem;
+}
+/* ADIÇOES */
+/* =========================================
+   LISTAS DO RODAPÉ
+========================================= */
+
+.informacoes-rodape ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.informacoes-rodape li {
+    margin: 0;
+}
+
+.informacoes-rodape nav a {
+    display: inline-block;
+    margin: 0;
+}

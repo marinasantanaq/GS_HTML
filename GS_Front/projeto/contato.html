@@ -1,0 +1,186 @@
+<!--
+INTEGRANTES DO GRUPO
+1TDSPA - RM574491 – MARINA SANTANA QUEIROZ
+1TDSPA - RM576524 – SOFIA OLIVEIRA GONÇALVES
+1TDSPA - RM575649 – JÚLIO BERNARDES DA SILVA
+1TDSPA - RM575635 – RAFAEL MADEIRA GOMES RIBEIRO
+1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a equipe da resposável pela ReTaste.">
+    <title>Contato | ReTaste </title>
+
+    <!-- Ícone da aba e fontes Google fonts -->
+    <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos do site -->
+    <link rel="stylesheet" href="../css/contato.css">
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body class="body">
+    <header class="cabecalho">
+        <div class="cabecalho-direita" aria-label="Navegação principal">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><img class="logo" src="../img/logo.svg" alt="Início">ReTaste</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="cabecalho-esquerda">
+            <nav>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="perfil.html"><img class="logo-perfil" src="../img/perfil.svg" alt="Perfil"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <div class="assets-container">
+                <!--ordem dos assetss de planta-->
+                <img src="../img/plant-escura.svg" alt="">
+                <img src="../img/plant-medium.svg" alt="">
+                <img src="../img/planta-media.svg" alt="">
+                <img src="../img/plant-medium.svg" alt="">
+                <img src="../img/planta-clarissima.svg" alt="">
+                <!--comidas rodape-->
+                <img src="../img/plant-medium.svg" alt="">
+                <img src="../img/ovo.svg" alt="">
+                <img src="../img/planta-media.svg" alt="">
+            </div>
+        </article>
+        <!-- Moldura azul com a abertura da página
+         aria-hidden="true" diz que o elemento >x< não sera lido  pela assistencia de tela-->
+        <div class="moldura">
+            <div class="brilho" aria-hidden="true"></div>
+            <section class="apresentacao">
+                <div class="h1-contato">
+                    <span class="selo">Contato</span>
+                    <h1>Fale com a <span class="destaque">ReTaste.</span></h1>
+                    <p>Para retirada de dúvidas, curiosidades, sugestões ou apenas conversar sobre o projeto. Envie uma
+                        mensagem.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Informações + formulário -->
+        <section class="infos-contato-container"
+            aria-label="email e endereço para localização da equipe fundadora e nome do projeto">
+            <div>
+                <div class="contato-info">
+                    <div class="email-contato">
+                        <h3 aria-label="email">Email</h3>
+                        <p>contatoretaste@outlook.com</p>
+                    </div>
+                    <div class="endereco-contato">
+                        <h3 aria-label="endereço">Endereço</h3>
+                        <p>FIAP - Av. Paulista, 1106 - São Paulo/SP</p>
+                    </div>
+                    <div class="projeto-contato">
+                        <h3 aria-label="projeto">Projeto</h3>
+                        <p>ReTaste - 2026</p>
+                        <a href="integrantes.html" aria-label="link para página de integrantes">integrantes</a>
+                    </div>
+                </div>
+
+                <!-- Os atributos "name" já deixam o formulário pronto para o back-end -->
+                <form class="contato-container" method="POST">
+                    <br><label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome Completo" autocomplete="name" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
+
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="" disabled selected>Assunto</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="parceria">Parceria</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                    <label for="mensagem">Sua mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+                    <br><button class="botao" type="submit">Enviar mensagem</button>
+                    <!--um parágrafo para classe ser identificada pejo js e ser enviara uma mensagem
+                        role status= aos leitores de tela que aquela área é de status
+                        aria-live="polite"= permite que leitores de terra leiam coisas novas que surgem na tela ou alterações na tela.
+                        polite= permite que o leitor termine o que está lendo para dar as informações.
+                        -->
+                    <p class="aviso" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <br>
+    <!-- RODAPÉ -->
+    <footer class="rodape" aria-label="rodapé">
+        <div class="chatbot">
+            <a class="botao" href="https://web.telegram.org/k/#@retaste_assistente_bot">
+                Assistente Virtual
+            </a>
+        </div>
+        <div class="rodape-conteudo">
+
+            <div>
+                <h2>ReTaste</h2>
+                <p>Compartilhar alimentos é multiplicar possibilidades.</p>
+            </div>
+
+            <div class="informacoes-rodape">
+                <h3>Informações</h3>
+
+                <nav aria-label="Informações sobre o projeto">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="informacoes-rodape">
+                <h3>Usuário</h3>
+
+                <nav aria-label="Área do usuário">
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="estabelecimentos.html">Estabelecimentos</a></li>
+                    </ul>
+                </nav>
+
+                <div class="projeto-rodape">
+                    <h3>Projeto</h3>
+                    <p>contatoretaste@outlook.com</p>
+                    <p>FIAP - Av. Paulista, 1106</p>
+                    <a href="integrantes.html">Integrantes</a>
+                    <p>São Paulo - SP</p>
+                </div>
+            </div>
+
+            <div class="rodape-final">
+                <p>© 2026 ReTaste. Projeto acadêmico FIAP - 1TDSPA.</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

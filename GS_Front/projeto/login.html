@@ -1,0 +1,163 @@
+<!--
+INTEGRANTES DO GRUPO
+1TDSPA - RM574491 – MARINA SANTANA QUEIROZ
+1TDSPA - RM576524 – SOFIA OLIVEIRA GONÇALVES
+1TDSPA - RM575649 – JÚLIO BERNARDES DA SILVA
+1TDSPA - RM575635 – RAFAEL MADEIRA GOMES RIBEIRO
+1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Faça o login do comerciante para cadastrar e gerenciar seus produtos para doação ou desconto.">
+    <title>Login do Comerciante | ReTaste </title>
+
+    <!-- Ícone da aba e fontes Google fonts -->
+    <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos do site -->
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body class="body-login">
+    <header class="cabecalho-login">
+        <div class="cabecalho-direita" aria-label="Navegação principal">
+            <a href="index.html"><img class="logo" src="../img/logo.svg" alt="Início"></a>
+            <a href="index.html"><strong>Re<span>Taste</span></strong></a>
+        </div>
+    </header>
+    <main>
+        <article>
+            <div class="assets-container">
+
+                <div class="composicao">
+
+                    <img class="prato" src="../img/prato.svg" alt="">
+                    <img class="planta-media-superior" src="../img/planta-media.svg" alt="">
+                    <img class="plant-escura" src="../img/plant-escura.svg" alt="">
+                    <img class="plant-medium-superior" src="../img/plant-medium.svg" alt="">
+                    <img class="planta-media" src="../img/planta-media.svg" alt="">
+                    <img class="plant-medium-inferior" src="../img/plant-medium.svg" alt="">
+                    <img class="plant-escura-inferior" src="../img/plant-escura.svg" alt="">
+                    <img class="planta-clarissima" src="../img/planta-clarissima.svg" alt="">
+
+                    <img class="cenoura" src="../img/cenoura.svg" alt="">
+                    <img class="coxa" src="../img/coxa.svg" alt="">
+
+                    <!-- O formulário fica dentro da composição -->
+                    <section aria-labelledby="titulo-doador">
+                        <div class="login-container">
+
+                            <h1 id="titulo-doador">
+                                Tornar-se um<br>
+                                <span class="destaque">doador</span>
+                            </h1>
+
+                            <form method="post">
+
+                                <div class="dados-login">
+
+                                    <div class="botao-login">
+                                        <label class="visually-hidden" for="nome">
+                                            Nome do estabelecimento
+                                        </label>
+                                        <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento"
+                                            autocomplete="organization" required>
+                                    </div>
+
+                                    <div class="botao-login">
+                                        <label class="visually-hidden" for="endereco">
+                                            Endereço
+                                        </label>
+                                        <input type="text" name="endereco" id="endereco" placeholder="Endereço"
+                                            autocomplete="street-address" required>
+                                    </div>
+
+                                    <div class="botao-login">
+                                        <label class="visually-hidden" for="cnpj">
+                                            CNPJ
+                                        </label>
+                                        <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" autocomplete="off"
+                                            maxlength="18">
+                                    </div>
+
+                                    <div class="botao-login">
+                                        <label class="visually-hidden" for="email-login">
+                                            E-mail
+                                        </label>
+                                        <input type="email" name="email" id="email-login" placeholder="Email"
+                                            autocomplete="email" required>
+                                    </div>
+
+                                    <div class="botao-login">
+                                        <label class="visually-hidden" for="senha">
+                                            Senha
+                                        </label>
+                                        <input type="password" name="senha" id="senha" placeholder="Senha"
+                                            autocomplete="current-password" required>
+                                    </div>
+
+                                </div>
+
+                                <div class="checkbox-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="manter_logado" value="logado">
+                                        <span class="texto">Manter logado</span>
+                                    </label>
+                                </div>
+
+                                <div class="termos-tenhoConta">
+                                    <a href="perfil.html" class="texto">
+                                        Já tenho uma conta
+                                    </a>
+                                </div>
+
+                                <div class="entrar-login">
+                                    <button type="submit" class="texto">
+                                        Entrar
+                                    </button>
+                                </div>
+
+                                <p class="termos">
+                                    Ao continuar, você concorda com <br>
+                                    <a href="#">nossos termos</a>.
+                                </p>
+
+                            </form>
+
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+        </article>
+    </main>
+    <!-- RODAPÉ -->
+    <footer class="rodape-login" aria-label="menu de navegação">
+        <fieldset>
+            <legend>Menu</legend>
+            <a class="home-imagem-login" href="index.html"><img src="../img/home.svg" alt="página home"
+                    aria-label="link para página home" /></a>
+            <a class="home-login" href="index.html">Home</a>
+            <br>
+            <a class="estab-imagem-login" href="estabelecimentos.html"><img src="../img/estabelecimento.svg"
+                    alt="página de ofertas de estabelecimentos"
+                    aria-label="link para página de ofertas de estabelecimentos" /></a>
+            <a class="estabelecimento-login" href="estabelecimentos.html">Estabelecimentos</a>
+        </fieldset>
+    </footer>
+</body>
+
+</html>

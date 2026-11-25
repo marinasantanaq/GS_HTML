@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Conheça os integrantes do projeto ReTaste, uma iniciativa que conecta pessoas e estabelecimentos ao compartilhamento de alimentos.">
+    <title>Integrantes | ReTaste </title>
+
+    <!-- Ícone da aba e fontes Google fonts -->
+    <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos do site -->
+    <link rel="stylesheet" href="../css/integrantes.css">
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body class="body">
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="cabecalho-esquerda" aria-label="Navegação principal">
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="estabelecimentos.html">Estabelecimentos</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="cabecalho-direita">
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="integrantes.html"><img class="logo-sobre" src="../img/logo.svg" alt="Início"></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="perfil.html"><img class="logo-sobre" src="../img/perfil.svg" alt="Perfil"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="apresentacao">
+            <h1>Quem faz parte do ReTaste?</h1>
+
+            <p>
+                Somos cinco integrantes da turma 1TDSPA, do curso de
+                Análise e Desenvolvimento de Sistemas (ADS) da FIAP.
+                Juntos, desenvolvemos uma iniciativa que conecta pessoas
+                e estabelecimentos ao compartilhamento de alimentos,
+                incentivando a solidariedade e o consumo consciente.
+            </p>
+        </section>
+
+        <!-- ÁREA DOS INTEGRANTES -->
+        <section class="secao-integrantes" aria-label="Apresentação dos integrantes do projeto">
+
+            <div class="cartao-integrantes">
+
+                <!-- ABAS COM OS NOMES selecionaveis para cada tabela de cada integrate.
+                 role="tablist", para acessibilidade. O role é um elemento que informa através de um valor o que aquela parte representa, caso não seja semântico igual "header=cabeçalho ou footer=rodapé"
+                 role="tablist"= lista com abas
+                 role="tab"= uma aba individual
+                 aria-selected="false"= aba não selecionada. "true"= aba selecionada.
+                 data-integrante="0"= atributo personalizado, que não é padrão do HTML, mas que serve para identificar o integrante selecionado. O valor "0" indica que é o primeiro integrante da lista.
+                -->
+                <div class="lista-integrantes" role="tablist" aria-label="Selecionar integrante">
+
+                    <button id="aba-rafael" aria-controls="painel-integrante" class="integrante-btn ativo" type="button" role="tab" aria-selected="true"
+                        data-integrante="0">
+                        Rafael Madeira
+                    </button>
+
+                    <button id="aba-enrique" aria-controls="painel-integrante" class="integrante-btn" type="button" role="tab" aria-selected="false" data-integrante="1">
+                        Enrique Trindade
+                    </button>
+
+                    <button id="aba-julio" aria-controls="painel-integrante" class="integrante-btn" type="button" role="tab" aria-selected="false" data-integrante="2">
+                        Júlio Bernardes
+                    </button>
+
+                    <button id="aba-sofia" aria-controls="painel-integrante" class="integrante-btn" type="button" role="tab" aria-selected="false" data-integrante="3">
+                        Sofia Oliveira
+                    </button>
+
+                    <button id="aba-marina" aria-controls="painel-integrante" class="integrante-btn" type="button" role="tab" aria-selected="false" data-integrante="4">
+                        Marina Santana
+                    </button>
+
+                </div>
+
+                <!-- FICHA DO INTEGRANTE -->
+                <div class="ficha-integrante" role="tabpanel">
+
+                    <div class="foto-container">
+                        <img src="../img/rafael.jpeg" alt="Foto de Rafael Madeira Gomes Ribeiro" id="foto-integrante">
+                    </div>
+
+                    <div class="informacoes-integrante">
+
+                        <div class="campo">
+                            <span class="campo-titulo">Nome</span>
+                            <span class="campo-valor" id="nome-integrante" aria-labelledby="nome-integrante">
+                                Rafael Madeira Gomes Ribeiro
+                            </span>
+                        </div>
+
+                        <div class="campo">
+                            <span class="campo-titulo">RM</span>
+                            <span class="campo-valor" id="rm-integrante" aria-labelledby="rm-integrante">
+                                575635
+                            </span>
+                        </div>
+
+                        <div class="campo">
+                            <span class="campo-titulo">Turma</span>
+                            <span class="campo-valor" id="turma-integrante" aria-labelledby="turma-integrante">
+                                1TDSPA
+                            </span>
+                        </div>
+
+                        <div class="campo">
+                            <span class="campo-titulo">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/rafael-madeira-b8545b312/" target="_blank"
+                                rel="noopener noreferrer" class="campo-link" id="linkedin-integrante"
+                                aria-labelledby="linkedin-integrante">
+                                Acessar perfil ↗
+                            </a>
+                        </div>
+
+                        <div class="campo">
+                            <span class="campo-titulo">GitHub</span>
+                            <a href="https://github.com/Ribeir0296" target="_blank" rel="noopener noreferrer"
+                                class="campo-link" id="github-integrante" aria-labelledby="github-integrante">
+                                Acessar perfil ↗
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- AGRADECIMENTO -->
+        <section class="agradecimento">
+            <p>
+                Por trás de cada ideia, existe uma equipe.
+                Por trás de cada projeto, pessoas que acreditam
+                na possibilidade de fazer a diferença.
+            </p>
+
+            <span>ReTaste · FIAP 2026</span>
+        </section>
+
+    </main>
+    <!-- RODAPÉ -->
+    <footer class="rodape" aria-label="rodapé">
+        <div class="chatbot">
+            <a class="botao" href="https://web.telegram.org/k/#@retaste_assistente_bot">
+                Assistente Virtual
+            </a>
+        </div>
+        <div class="rodape-conteudo">
+
+            <div>
+                <h2>ReTaste</h2>
+                <p>Compartilhar alimentos é multiplicar possibilidades.</p>
+            </div>
+
+            <div class="informacoes-rodape">
+                <h3>Informações</h3>
+
+                <nav aria-label="Informações sobre o projeto">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="informacoes-rodape">
+                <h3>Usuário</h3>
+
+                <nav aria-label="Área do usuário">
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="estabelecimentos.html">Estabelecimentos</a></li>
+                    </ul>
+                </nav>
+
+                <div class="projeto-rodape">
+                    <h3>Projeto</h3>
+                    <p>contatoretaste@outlook.com</p>
+                    <p>FIAP - Av. Paulista, 1106</p>
+                    <a href="integrantes.html">Integrantes</a>
+                    <p>São Paulo - SP</p>
+                </div>
+            </div>
+
+            <div class="rodape-final">
+                <p>© 2026 ReTaste. Projeto acadêmico FIAP - 1TDSPA.</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

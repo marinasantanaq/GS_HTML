@@ -1,0 +1,252 @@
+<!--
+INTEGRANTES DO GRUPO
+1TDSPA - RM574491 – MARINA SANTANA QUEIROZ
+1TDSPA - RM576524 – SOFIA OLIVEIRA GONÇALVES
+1TDSPA - RM575649 – JÚLIO BERNARDES DA SILVA
+1TDSPA - RM575635 – RAFAEL MADEIRA GOMES RIBEIRO
+1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visualize e gerencie seu perfil como doador no ReTaste.">
+    <title>Perfil | ReTaste </title>
+
+    <!-- Ícone da aba e fontes Google fonts -->
+    <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos do site -->
+    <link rel="stylesheet" href="../css/perfil.css">
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body class="body">
+    <header class="cabecalho">
+        <div class="cabecalho-esquerda" aria-label="Navegação principal">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><img class="logo" src="../img/logo.svg" alt="Home"></a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="estabelecimentos.html">Estabelecimentos</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="cabecalho-direita">
+            <nav>
+                <ul>
+                    <li><a href="perfil.html"><img class="logo-perfil" src="../img/perfil.svg" alt="Perfil"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+
+        <section>
+
+            <form>
+                <fieldset>
+                    <legend>Adicionar produto</legend>
+
+                    <!-- NOME DO ESTABELECIMENTO -->
+                    <div class="botao-login">
+                        <label for="nome">Nome do estabelecimento</label>
+                        <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento"
+                            autocomplete="organization" required>
+                    </div>
+
+                    <!-- ENDEREÇO -->
+                    <div class="botao-login">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" name="endereco" id="endereco" placeholder="Endereço do estabelecimento"
+                            autocomplete="street-address" required>
+                    </div>
+
+                    <!-- DESCRIÇÃO DO PRODUTO -->
+                    <div class="botao-login">
+                        <label for="descricao">Descrição do produto</label>
+                        <textarea name="descricao" id="descricao" placeholder="Descreva os produtos disponíveis"
+                            rows="3" required></textarea>
+                    </div>
+
+                    <!-- OFERTA -->
+                    <div class="botao-login">
+                        <label for="oferta">Oferta</label>
+                        <textarea name="oferta" id="oferta" placeholder="Descreva a oferta disponível" rows="3"
+                            required></textarea>
+                    </div>
+
+                    <!-- TIPO DE EMBALAGEM -->
+                    <div class="botao-login">
+                        <label for="embalagem">Tipo de embalagem</label>
+                        <select name="embalagem" id="embalagem" required>
+                            <option value="">Selecione a embalagem</option>
+                            <option value="pote">Pote</option>
+                            <option value="caixa">Caixa</option>
+                            <option value="saco">Saco</option>
+                            <option value="garrafa">Garrafa</option>
+                            <option value="bandeja">Bandeja</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <!-- DESCRIÇÃO DA EMBALAGEM -->
+                    <div class="botao-login">
+                        <label for="descricao-embalagem">Descrição da embalagem</label>
+                        <textarea name="descricao-embalagem" id="descricao-embalagem"
+                            placeholder="Descreva as características da embalagem" rows="3" required></textarea>
+                    </div>
+
+                    <!-- PESO -->
+                    <div class="botao-login">
+                        <label for="peso">Peso do produto (kg)</label>
+                        <input type="number" name="peso" id="peso" placeholder="Ex.: 0,5" min="0" step="0.01"
+                            inputmode="decimal" required>
+                    </div>
+
+                    <!-- EMBALAGEM RETORNÁVEL -->
+                    <div class="checkbox-group">
+                        <label class="checkbox" for="retornavel">
+                            <input type="checkbox" name="retornavel" id="retornavel" value="sim">
+                            <span class="texto">Retornável</span>
+                        </label>
+                    </div>
+
+                    <!-- TIPO DE MATERIAL -->
+                    <div id="filtro">
+                        <div class="filtro-estados">
+
+                            <label for="material">Tipo de material:</label>
+
+                            <select id="material" name="material" required>
+                                <option value="">Selecione o material</option>
+                                <option value="biodegradavel">Biodegradável</option>
+                                <option value="nao-biodegradavel">Não biodegradável</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <!-- BOTÃO -->
+                    <div>
+                        <button type="submit" class="btn-excluir" data-id="mercado">
+                            Adicionar
+                        </button>
+                    </div>
+
+                </fieldset>
+            </form>
+
+        </section>
+        <!--PRODUTOSS-->
+        <!-- PRODUTOS -->
+        <section aria-labelledby="titulo-produtos">
+            <h2 id="titulo-produtos">Produtos</h2>
+
+            <article class="produto-card" id="produto-mercado">
+                <h3>Pães e Bolos</h3>
+
+                <p><strong>Estabelecimento:</strong> Mercado Verde</p>
+                <p><strong>Endereço:</strong> Rua das Palmeiras, 789</p>
+                <p><strong>Contato:</strong> (11) 2468-1357</p>
+                <p><strong>Descrição:</strong> Produtos com e sem glúten e lactose</p>
+                <p><strong>Oferta:</strong> Doações de alimentos</p>
+
+                <button type="button" class="btn-excluir" data-excluir data-id="produto-mercado"
+                    aria-label="Excluir produto do Mercado Verde">
+                    Excluir
+                </button>
+            </article>
+        </section>
+        <!-- CARRINHO -->
+        <section aria-labelledby="titulo-carrinho">
+            <h2 id="titulo-carrinho">Carrinho</h2>
+
+            <article class="produto-card" id="carrinho-mercado">
+                <h3>Pães e Bolos</h3>
+
+                <p><strong>Estabelecimento:</strong> Mercado Verde</p>
+                <p><strong>Endereço:</strong> Rua das Palmeiras, 789</p>
+                <p><strong>Contato:</strong> (11) 2468-1357</p>
+                <p><strong>Descrição:</strong> Produtos com e sem glúten e lactose</p>
+                <p><strong>Oferta:</strong> Doações de alimentos</p>
+
+                <p id="destaque">
+                    Ligue para o vendedor para realizar a compra ou a retirada de doações.
+                </p>
+
+                <button type="button" class="btn-excluir" data-excluir data-id="carrinho-mercado"
+                    aria-label="Excluir produto do carrinho">
+                    Excluir
+                </button>
+            </article>
+        </section>
+    </main>
+    <!-- RODAPÉ -->
+    <br>
+    <!-- RODAPÉ -->
+    <footer class="rodape" aria-label="rodapé">
+        <div class="chatbot">
+            <a class="botao" href="https://web.telegram.org/k/#@retaste_assistente_bot">
+                Assistente Virtual
+            </a>
+        </div>
+        <div class="rodape-conteudo">
+
+            <div>
+                <h2>ReTaste</h2>
+                <p>Compartilhar alimentos é multiplicar possibilidades.</p>
+            </div>
+
+            <div class="informacoes-rodape">
+                <h3>Informações</h3>
+
+                <nav aria-label="Informações sobre o projeto">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="informacoes-rodape">
+                <h3>Usuário</h3>
+
+                <nav aria-label="Área do usuário">
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="estabelecimentos.html">Estabelecimentos</a></li>
+                    </ul>
+                </nav>
+
+                <div class="projeto-rodape">
+                    <h3>Projeto</h3>
+                    <p>contatoretaste@outlook.com</p>
+                    <p>FIAP - Av. Paulista, 1106</p>
+                    <a href="integrantes.html">Integrantes</a>
+                    <p>São Paulo - SP</p>
+                </div>
+            </div>
+
+            <div class="rodape-final">
+                <p>© 2026 ReTaste. Projeto acadêmico FIAP - 1TDSPA.</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
